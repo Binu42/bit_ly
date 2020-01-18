@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-light bg-info">
-        <a className="navbar-brand" href="#">Navbar</a>
+      <nav className="navbar navbar-expand-sm navbar-light bg-primary">
+        <a className="navbar-brand font-weight-bold text-light" href="#">Navbar</a>
         <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
           aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
