@@ -25,7 +25,7 @@ export class Link extends Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
             <div className="form-group">
               <label htmlFor="link">Enter Link</label>
-              <input type="text" name="" id="link" ref="link" className="form-control" placeholder="Enter Link Here" />
+              <input type="text" name="" id="link" ref="link" className="form-control" placeholder="Enter Link Here to get Short Url" />
               <div className="text-danger">{this.state.error}</div>
               <input type="submit" value="Short Link" className="btn btn-success mt-2" />
             </div>
