@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.6",
+    "connect-route": "^0.1.5",
+    "create-react-class": "^15.6.3",
     "meteor-node-stubs": "^1.0.0",
     "react": "^16.9.0",
     "react-addons-pure-render-mixin": "^15.6.2",
