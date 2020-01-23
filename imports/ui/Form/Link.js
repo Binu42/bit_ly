@@ -1,8 +1,22 @@
 import React, { Component } from 'react'
 
 export class Link extends Component {
-  handleSubmit = () => {
-    console.log(this.refs.link.value);
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: ''
+    }
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    Meteor.call('insert.link', this.refs.link.value, (err) => {
+      if (err) {
+        this.setState({ error: "Not a valid Link, Please Enter valid Link" })
+      } else {
+        this.setState({ error: "" })
+        this.refs.link.value = ''
+      }
+    })
   }
   render() {
     return (
@@ -12,6 +26,7 @@ export class Link extends Component {
             <div className="form-group">
               <label htmlFor="link">Enter Link</label>
               <input type="text" name="" id="link" ref="link" className="form-control" placeholder="Enter Link Here" />
+              <div className="text-danger">{this.state.error}</div>
               <input type="submit" value="Short Link" className="btn btn-success mt-2" />
             </div>
           </form>

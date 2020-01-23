@@ -1,3 +1,11 @@
 import { Mongo } from 'meteor/mongo';
+import validUrl from 'valid-url'
+import { check, Match } from 'meteor/check'
 
-export const links = new Mongo.Collection('links');
+Meteor.methods({
+  'insert.link': function (url) {
+    check(url, Match.Where(url => validUrl.isUri(url)));
+  }
+})
+
+export const Links = new Mongo.Collection('links');
