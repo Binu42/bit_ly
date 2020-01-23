@@ -6,7 +6,7 @@ class Link_list extends Component {
   renderRows() {
     return (this.props.links.map(link => {
       const { url, token, count } = link;
-      const shortenLink = `http://localhost:3000/${token}`;
+      const shortenLink = `https://bityly.herokuapp.com/${token}`;
       return (
         <tr key={token}>
           <td>{url}</td>
@@ -19,9 +19,9 @@ class Link_list extends Component {
   render() {
     return (
       <div className="p-5">
-        <table className="table">
+        <table className="table text-center table-striped table-hover">
           <thead>
-            <tr className="text-center">
+            <tr>
               <th>URL</th>
               <th>Shorten Link</th>
               <th>No.of Visits</th>
