@@ -1,17 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './Layout/Navbar'
 import Footer from './Layout/Footer'
-import LinkForm from './Link-UI/Link'
-import Link_list from './Link-UI/Link_list'
+import Home from './Pages/Home'
+import About from './Pages/About'
+
 
 const App = () => (
-  <div className="app">
-    <Navbar />
-    <h1 className="text-center" style={{ "marginTop": "80px" }}>Welcome to Bit_Ly+</h1>
-    <LinkForm />
-    <Link_list />
-    <Footer />
-  </div>
+  <Router>
+    <div className="app">
+      <Navbar />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path="/about" component={About} />
+      </Switch>
+      <Footer />
+    </div>
+  </Router>
 );
 
 export default App;
