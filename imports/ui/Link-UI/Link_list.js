@@ -18,8 +18,8 @@ class Link_list extends Component {
   }
   render() {
     return (
-      <div className="p-5">
-        <table className="table text-center table-striped table-hover">
+      <div className="p-md-5">
+        <table id="link_list" className="table text-center table-striped table-hover table-responsive-sm">
           <thead>
             <tr>
               <th>URL</th>
