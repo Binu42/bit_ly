@@ -5,7 +5,7 @@ import connectRoute from 'connect-route'
 
 Meteor.startup(() => {
   Meteor.publish('links', () => {
-    return Links.find({});
+    return Links.find({}, { sort: { count: -1 } });
   })
 });
 

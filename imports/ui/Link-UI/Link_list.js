@@ -40,5 +40,5 @@ class Link_list extends Component {
 export default createContainer(() => {
   Meteor.subscribe('links');
 
-  return { links: Links.find({}).fetch() };
+  return { links: Links.find({}, { sort: { count: -1 } }).fetch() };
 }, Link_list)
