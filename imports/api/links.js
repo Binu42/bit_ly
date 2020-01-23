@@ -5,6 +5,10 @@ import { check, Match } from 'meteor/check'
 Meteor.methods({
   'insert.link': function (url) {
     check(url, Match.Where(url => validUrl.isUri(url)));
+
+    // saving url
+    const token = Math.random().toString(32).splice(-5);
+    Links.insert({ url, token, count: 0 })
   }
 })
 

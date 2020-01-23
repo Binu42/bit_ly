@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Layout/Navbar'
 import Footer from './Layout/Footer'
-import LinkForm from './Form/Link'
+import LinkForm from './Link-UI/Link'
 
 const App = () => (
   <div className="app">
