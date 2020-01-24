@@ -1,5 +1,12 @@
-**URL shortener like bit.ly**
+### URL shortener like bit.ly
 
-Demo Images
-![image 1](home.png)
-![image 2](about.png)
+- **Demo Images**
+  - **Home page**
+    ![image 1](home.png)
+    ***
+  - **About page**
+    ![image 2](about.png)
+    ***
+  - **Error page**
+    ![image 3](error.png)
+    ***
